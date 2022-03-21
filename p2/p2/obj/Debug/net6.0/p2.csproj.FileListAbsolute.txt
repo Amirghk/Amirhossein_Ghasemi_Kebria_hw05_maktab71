@@ -1,0 +1,15 @@
+G:\MAKTAB\HomeWork5\p2\p2\bin\Debug\net6.0\p2.exe
+G:\MAKTAB\HomeWork5\p2\p2\bin\Debug\net6.0\p2.deps.json
+G:\MAKTAB\HomeWork5\p2\p2\bin\Debug\net6.0\p2.runtimeconfig.json
+G:\MAKTAB\HomeWork5\p2\p2\bin\Debug\net6.0\p2.dll
+G:\MAKTAB\HomeWork5\p2\p2\bin\Debug\net6.0\p2.pdb
+G:\MAKTAB\HomeWork5\p2\p2\obj\Debug\net6.0\p2.csproj.AssemblyReference.cache
+G:\MAKTAB\HomeWork5\p2\p2\obj\Debug\net6.0\p2.GeneratedMSBuildEditorConfig.editorconfig
+G:\MAKTAB\HomeWork5\p2\p2\obj\Debug\net6.0\p2.AssemblyInfoInputs.cache
+G:\MAKTAB\HomeWork5\p2\p2\obj\Debug\net6.0\p2.AssemblyInfo.cs
+G:\MAKTAB\HomeWork5\p2\p2\obj\Debug\net6.0\p2.csproj.CoreCompileInputs.cache
+G:\MAKTAB\HomeWork5\p2\p2\obj\Debug\net6.0\p2.dll
+G:\MAKTAB\HomeWork5\p2\p2\obj\Debug\net6.0\refint\p2.dll
+G:\MAKTAB\HomeWork5\p2\p2\obj\Debug\net6.0\p2.pdb
+G:\MAKTAB\HomeWork5\p2\p2\obj\Debug\net6.0\p2.genruntimeconfig.cache
+G:\MAKTAB\HomeWork5\p2\p2\obj\Debug\net6.0\ref\p2.dll
