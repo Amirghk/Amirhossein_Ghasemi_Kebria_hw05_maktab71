@@ -1,0 +1,15 @@
+G:\MAKTAB\HomeWork5\p1\p1\bin\Debug\net6.0\p1.exe
+G:\MAKTAB\HomeWork5\p1\p1\bin\Debug\net6.0\p1.deps.json
+G:\MAKTAB\HomeWork5\p1\p1\bin\Debug\net6.0\p1.runtimeconfig.json
+G:\MAKTAB\HomeWork5\p1\p1\bin\Debug\net6.0\p1.dll
+G:\MAKTAB\HomeWork5\p1\p1\bin\Debug\net6.0\p1.pdb
+G:\MAKTAB\HomeWork5\p1\p1\obj\Debug\net6.0\p1.csproj.AssemblyReference.cache
+G:\MAKTAB\HomeWork5\p1\p1\obj\Debug\net6.0\p1.GeneratedMSBuildEditorConfig.editorconfig
+G:\MAKTAB\HomeWork5\p1\p1\obj\Debug\net6.0\p1.AssemblyInfoInputs.cache
+G:\MAKTAB\HomeWork5\p1\p1\obj\Debug\net6.0\p1.AssemblyInfo.cs
+G:\MAKTAB\HomeWork5\p1\p1\obj\Debug\net6.0\p1.csproj.CoreCompileInputs.cache
+G:\MAKTAB\HomeWork5\p1\p1\obj\Debug\net6.0\p1.dll
+G:\MAKTAB\HomeWork5\p1\p1\obj\Debug\net6.0\refint\p1.dll
+G:\MAKTAB\HomeWork5\p1\p1\obj\Debug\net6.0\p1.pdb
+G:\MAKTAB\HomeWork5\p1\p1\obj\Debug\net6.0\p1.genruntimeconfig.cache
+G:\MAKTAB\HomeWork5\p1\p1\obj\Debug\net6.0\ref\p1.dll
