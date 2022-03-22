@@ -42,6 +42,6 @@
 
     public override string ToString()
     {
-        return $"{id} -- Name: {name} -- Age: {age} -- Birthdate: {birthdate} -- Address: {address} -- National ID: {nationalId};
+        return $"{id} -- Name: {name} -- Age: {age} -- Birthdate: {birthdate} -- Address: {address} -- National ID: {nationalId}";
     }
 }

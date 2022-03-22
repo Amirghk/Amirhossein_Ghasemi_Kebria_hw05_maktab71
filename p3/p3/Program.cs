@@ -11,8 +11,7 @@ string[] data;
 bool first = true;
 
 var lines = File.ReadAllLines(@".\MOCK_DATA.csv");
-var y = lines[2].Split(',')[2].Split('-')[2];
-Console.WriteLine(y);
+
 foreach (var line in lines)
 {   
     if (!first)
@@ -28,7 +27,42 @@ foreach (var line in lines)
     first = false;
 }
 
-Console.WriteLine(DataStore.people[1]);
+
+var a = DataStore.people.FindAll(p => p.age > 20).OrderBy(p => p.name);
+
+var b = DataStore.people.FindAll(p => p.birthdate.Year < 1999);
+
+// var c = ???
+
+var d = DataStore.people.OrderBy(p => p.id).Skip(3).First();
+
+var e = DataStore.people.OrderBy(p => p.id).Skip(49).Take(30);
+
+var f = DataStore.people.FindAll(x => x.age == DataStore.people.Max(p => p.age));
+
+// TODO: g find out if there are duplicate ids in the list
+
+// TODO: h addresses that include tehran
+
+// TODO: i ?? 
+
+// TODO: j 123 is in the id
+
+// TODO: id and address of ppl older than 25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //for (int i = 0; i < count; i++)
 //{
