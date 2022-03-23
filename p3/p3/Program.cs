@@ -40,12 +40,23 @@ var e = DataStore.people.OrderBy(p => p.id).Skip(49).Take(30);
 
 var f = DataStore.people.FindAll(x => x.age == DataStore.people.Max(p => p.age));
 
-// TODO: g find out if there are duplicate ids in the list
-
-// TODO: h addresses that include tehran
+var g = DataStore.people.GroupBy(x => x.nationalId).Where(g => g.Count() > 1).ToList();
+//foreach (var item in g)
+//{
+//    foreach (var p in item)
+//    {
+//        Console.WriteLine(p);
+//    }
+//    Console.WriteLine("***************************************************************************");
+//}
+var h = DataStore.people.FindAll(p => p.address.Contains("Tehran"));
 
 // TODO: i ?? 
-
+var i = DataStore.people.FindAll(p => p.address.Contains("Tehran")).GroupBy(p => p.name).Where(g => g.Count() > 1).ToList();
+foreach (var item in i)
+{
+    Console.WriteLine(item);
+}
 // TODO: j 123 is in the id
 
 // TODO: id and address of ppl older than 25
@@ -92,7 +103,6 @@ var f = DataStore.people.FindAll(x => x.age == DataStore.people.Max(p => p.age))
 //}
 
 
-Console.WriteLine("Done");
 // rnd.Next(18, 99);
 // 2022 - age will be in birth date
 // id should be incremented by 1 each iteration
