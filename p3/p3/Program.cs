@@ -51,16 +51,31 @@ var g = DataStore.people.GroupBy(x => x.nationalId).Where(g => g.Count() > 1).To
 //}
 var h = DataStore.people.FindAll(p => p.address.Contains("Tehran"));
 
-// TODO: i ?? 
 var i = DataStore.people.FindAll(p => p.address.Contains("Tehran")).GroupBy(p => p.name).Where(g => g.Count() > 1).ToList();
 foreach (var item in i)
 {
+    foreach (var p in item)
+    {
+        Console.WriteLine(p);
+    }
+    Console.WriteLine("****************************************");
+}
+// TODO: j 123 is in the id why does it return a 2d list???
+var j = DataStore.people.FindAll(p => (p.nationalId).ToString().Contains("123"));
+//foreach (var item in j)
+//{
+//    foreach (var z in j)
+//    {
+//        Console.WriteLine(z);
+//    }
+//}
+// TODO: id and address of ppl older than 25
+var k = DataStore.people.Where(p => p.age > 25).Select(x => new { x.id, x.address });
+
+foreach (var item in k)
+{
     Console.WriteLine(item);
 }
-// TODO: j 123 is in the id
-
-// TODO: id and address of ppl older than 25
-
 
 
 
