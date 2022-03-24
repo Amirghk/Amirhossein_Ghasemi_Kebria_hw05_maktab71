@@ -1,0 +1,15 @@
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\bin\Debug\net6.0\p4.exe
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\bin\Debug\net6.0\p4.deps.json
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\bin\Debug\net6.0\p4.runtimeconfig.json
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\bin\Debug\net6.0\p4.dll
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\bin\Debug\net6.0\p4.pdb
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\obj\Debug\net6.0\p4.csproj.AssemblyReference.cache
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\obj\Debug\net6.0\p4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\obj\Debug\net6.0\p4.AssemblyInfoInputs.cache
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\obj\Debug\net6.0\p4.AssemblyInfo.cs
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\obj\Debug\net6.0\p4.csproj.CoreCompileInputs.cache
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\obj\Debug\net6.0\p4.dll
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\obj\Debug\net6.0\refint\p4.dll
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\obj\Debug\net6.0\p4.pdb
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\obj\Debug\net6.0\p4.genruntimeconfig.cache
+C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\obj\Debug\net6.0\ref\p4.dll

@@ -1,6 +1,7 @@
 ﻿public class Thesis : Researches // +
 {
     string professor;
+    public override Roles Role => Roles.thesis;
     public Thesis(string name, BookWriter writer, string universityName, string professor) : base (name, writer, universityName)
     {
         this.professor = professor;

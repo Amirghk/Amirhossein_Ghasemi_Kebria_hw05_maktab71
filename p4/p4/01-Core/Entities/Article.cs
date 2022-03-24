@@ -2,6 +2,7 @@
 {
     public readonly string journal;
     public readonly int year;
+    public override Roles Role => Roles.article;
     public Article(string name, BookWriter writer, string universityName, string journal, int year) : base (name, writer, universityName)
     {
         this.journal = journal;

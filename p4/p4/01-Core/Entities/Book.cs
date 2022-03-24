@@ -4,6 +4,12 @@
     public BookWriter writer;
     public Member? borrowed = null;
     public LibraryDate? borrowedDate = null;
+    public virtual Roles Role {
+        get
+        {
+            return Roles.book;
+        }
+    }
     public Book(string name, BookWriter writer)
     {
         this.name = name;
