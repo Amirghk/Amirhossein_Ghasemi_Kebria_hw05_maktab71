@@ -3,7 +3,7 @@
     int day;
     int month;
     int year;
-    // TODO : make a - operator
+
     public LibraryDate(int day, int month, int year)
     {
         this.day = day;

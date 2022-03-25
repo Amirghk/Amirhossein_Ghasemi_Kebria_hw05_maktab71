@@ -5,6 +5,7 @@
     public List<Book> borrowedBooks;
     public List<Librarian> librarians;
     public List<Member> members;
+    public List<BookWriter> writers;
 
     public Library(string name)
     {
