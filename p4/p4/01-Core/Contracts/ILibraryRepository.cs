@@ -19,6 +19,6 @@
 
 
     //Save changes
-    public void SaveChanges(List<Book> books, List<Librarian> librarians, List<Member> members);
+    public void SaveChanges(List<Book> books, List<Librarian> librarians, List<Member> members, List<BookWriter> writers);
 
 }

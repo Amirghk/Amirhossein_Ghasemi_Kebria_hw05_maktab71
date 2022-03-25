@@ -61,63 +61,102 @@ public class LibraryRepoFile : ILibraryRepository
         return articlesList; // return list
     }
 
-    public Book GetBook(string name)
+    public Book? GetBook(string name)
     {
-        throw new NotImplementedException();
+        var books = JsonConvert.DeserializeObject<List<Book>>(File.ReadAllText(booksAddress));
+        return books.FirstOrDefault(b => b.name == name);
     }
 
     public List<Book> GetBooks()
     {
-        throw new NotImplementedException();
+        return JsonConvert.DeserializeObject<List<Book>>(File.ReadAllText(booksAddress));
     }
 
     public List<BookWriter> GetBookWriters()
     {
-        throw new NotImplementedException();
+        return JsonConvert.DeserializeObject<List<BookWriter>>(File.ReadAllText(writersAddress));
     }
 
-    public Librarian GetLibrarian(int id)
+    public Librarian? GetLibrarian(int id)
     {
-        throw new NotImplementedException();
+        var librarians = JsonConvert.DeserializeObject<List<Librarian>>(File.ReadAllText(librariansAddress));
+        return librarians.FirstOrDefault(l => l.librarianID == id);
     }
 
     public List<Librarian> GetLibrarians()
     {
-        throw new NotImplementedException();
+        return JsonConvert.DeserializeObject<List<Librarian>>(File.ReadAllText(librariansAddress));
     }
 
-    public Member GetMember(int id)
+    public Member? GetMember(int id)
     {
-        throw new NotImplementedException();
+        var members = JsonConvert.DeserializeObject<List<Member>>(File.ReadAllText(membersAddress));
+        return members.FirstOrDefault(m => m.memeberID == id);
     }
 
-    public List<Member> GetMembers()
+    public List<Member>? GetMembers()
     {
-        throw new NotImplementedException();
+        return JsonConvert.DeserializeObject<List<Member>>(File.ReadAllText(membersAddress));
     }
 
-    public List<Researches> GetResearches()
+    public List<Researches>? GetResearches()
     {
-        throw new NotImplementedException();
+        var books = JsonConvert.DeserializeObject<List<Book>>(File.ReadAllText(booksAddress));
+        var researches = books.FindAll(b => b.Role == Roles.researches);
+        List<Researches> res = new List<Researches>();
+        foreach (var item in researches)
+        {
+            res.Add((Researches)item);
+        }
+        return res;
     }
 
     public List<ScienceBook> GetScienceBooks()
     {
-        throw new NotImplementedException();
+        var books = JsonConvert.DeserializeObject<List<Book>>(File.ReadAllText(booksAddress));
+        var scienceBooks = books.FindAll(b => b.Role == Roles.scienceBook);
+        List<ScienceBook> scb = new List<ScienceBook>();
+        foreach (var item in scienceBooks)
+        {
+            scb.Add((ScienceBook)item);
+        }
+        return scb;
     }
 
     public List<StoryBook> GetStoryBooks()
     {
-        throw new NotImplementedException();
+        var books = JsonConvert.DeserializeObject<List<Book>>(File.ReadAllText(booksAddress));
+        var storyBooks = books.FindAll(b => b.Role == Roles.storyBook);
+        List<StoryBook> sb = new List<StoryBook>();
+        foreach (var item in storyBooks)
+        {
+            sb.Add((StoryBook)item);
+        }
+        return sb;
     }
 
     public List<Thesis> GetThesis()
     {
-        throw new NotImplementedException();
+        var books = JsonConvert.DeserializeObject<List<Book>>(File.ReadAllText(booksAddress));
+        var theses = books.FindAll(b => b.Role == Roles.thesis);
+        List<Thesis> th = new List<Thesis>();
+        foreach (var item in theses)
+        {
+            th.Add((Thesis)item);
+        }
+        return th;
     }
 
-    public void SaveChanges(List<Book> books, List<Librarian> librarians, List<Member> members)
+    public void SaveChanges(List<Book> books, List<Librarian> librarians, List<Member> members, List<BookWriter> writers)
     {
-        throw new NotImplementedException();
+        string outputBooks = JsonConvert.SerializeObject(books);
+        string outputLibrarians = JsonConvert.SerializeObject(librarians);
+        string outputMembers = JsonConvert.SerializeObject(members);
+        string outputWriters = JsonConvert.SerializeObject(writers);
+
+        File.WriteAllText(booksAddress, outputBooks);
+        File.WriteAllText(membersAddress, outputMembers);
+        File.WriteAllText(librariansAddress, outputLibrarians);
+        File.WriteAllText(writersAddress, outputWriters);
     }
 }

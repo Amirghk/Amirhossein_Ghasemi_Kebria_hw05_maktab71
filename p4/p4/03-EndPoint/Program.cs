@@ -9,3 +9,11 @@ JsonConvert.DefaultSettings = () => new JsonSerializerSettings
 
 LibraryRepository lb = new();
 var storyBooks = lb.GetStoryBooks();
+
+// sign up members
+// log in as members
+// borrow books 
+// give back books and show the penalty if any
+// sign up librarians 
+// add writers
+// add books and a choice of writers and genres
