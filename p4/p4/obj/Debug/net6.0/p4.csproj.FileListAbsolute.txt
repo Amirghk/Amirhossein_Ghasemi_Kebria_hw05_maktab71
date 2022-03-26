@@ -13,3 +13,20 @@ C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\obj\Debug\net6.0\refint\p4.
 C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\obj\Debug\net6.0\p4.pdb
 C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\obj\Debug\net6.0\p4.genruntimeconfig.cache
 C:\Amir Programming stuff\HW5\HomeWork5-MAKTAB\p4\p4\obj\Debug\net6.0\ref\p4.dll
+G:\MAKTAB\HomeWork5\p4\p4\obj\Debug\net6.0\p4.csproj.AssemblyReference.cache
+G:\MAKTAB\HomeWork5\p4\p4\obj\Debug\net6.0\p4.GeneratedMSBuildEditorConfig.editorconfig
+G:\MAKTAB\HomeWork5\p4\p4\obj\Debug\net6.0\p4.AssemblyInfoInputs.cache
+G:\MAKTAB\HomeWork5\p4\p4\obj\Debug\net6.0\p4.AssemblyInfo.cs
+G:\MAKTAB\HomeWork5\p4\p4\obj\Debug\net6.0\p4.csproj.CoreCompileInputs.cache
+G:\MAKTAB\HomeWork5\p4\p4\obj\Debug\net6.0\p4.dll
+G:\MAKTAB\HomeWork5\p4\p4\obj\Debug\net6.0\refint\p4.dll
+G:\MAKTAB\HomeWork5\p4\p4\obj\Debug\net6.0\p4.pdb
+G:\MAKTAB\HomeWork5\p4\p4\bin\Debug\net6.0\p4.exe
+G:\MAKTAB\HomeWork5\p4\p4\bin\Debug\net6.0\p4.deps.json
+G:\MAKTAB\HomeWork5\p4\p4\bin\Debug\net6.0\p4.runtimeconfig.json
+G:\MAKTAB\HomeWork5\p4\p4\bin\Debug\net6.0\p4.dll
+G:\MAKTAB\HomeWork5\p4\p4\bin\Debug\net6.0\p4.pdb
+G:\MAKTAB\HomeWork5\p4\p4\bin\Debug\net6.0\Newtonsoft.Json.dll
+G:\MAKTAB\HomeWork5\p4\p4\obj\Debug\net6.0\p4.csproj.CopyComplete
+G:\MAKTAB\HomeWork5\p4\p4\obj\Debug\net6.0\p4.genruntimeconfig.cache
+G:\MAKTAB\HomeWork5\p4\p4\obj\Debug\net6.0\ref\p4.dll

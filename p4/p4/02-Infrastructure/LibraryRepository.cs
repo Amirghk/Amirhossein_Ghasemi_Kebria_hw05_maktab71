@@ -116,4 +116,12 @@
         DataStore.librarians = librarians;
         DataStore.members = members;
     }
+
+    public void SaveChanges(List<Book> books, List<Librarian> librarians, List<Member> members, List<BookWriter> writers)
+    {
+        DataStore.books = books;
+        DataStore.librarians = librarians;
+        DataStore.members = members;
+        DataStore.writers = writers;
+    }
 }

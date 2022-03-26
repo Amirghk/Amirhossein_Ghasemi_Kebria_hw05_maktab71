@@ -26,14 +26,26 @@
     {
         borrowedBook.borrowed = member;
         borrowedBook.borrowedDate = borrowedDate;
-        borrowedBooks.Add(borrowedBook);
+        if (borrowedBooks == null)
+        {
+            borrowedBooks = new List<Book>
+            {
+                borrowedBook,
+            };
+        }
+        else
+            borrowedBooks.Add(borrowedBook);
     }
 
     public void DeleteBorrowedBook(Book borrowedBook, LibraryDate returnDate)
     {
         int daysBorrowed = returnDate - borrowedBook.borrowedDate;
         if (daysBorrowed > 7)
+        {
             borrowedBook.borrowed.penalties += daysBorrowed * 500;
+            Console.WriteLine($"Your return penalty is {borrowedBook.borrowed.penalties}");
+        }
+            
         borrowedBook.borrowed = null;
         borrowedBook.borrowedDate = null;
         borrowedBooks.Remove(borrowedBook);
@@ -49,11 +61,17 @@
 
     public void GetBorrowedBooks()
     {
-        foreach (var item in borrowedBooks)
+        if (borrowedBooks == null)
+            Console.WriteLine("No books borrowed yet!");
+        else
         {
-            Console.WriteLine($"-- {item.name}");
+            foreach (var item in borrowedBooks)
+            {
+                Console.WriteLine($"-- {item.name}");
+            }
         }
-    }
+        
+    } // try catch didn't work here
 
     public void GetAvailableBooks()
     {

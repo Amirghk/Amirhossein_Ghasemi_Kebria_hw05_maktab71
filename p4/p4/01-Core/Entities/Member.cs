@@ -4,7 +4,7 @@
     public string lastName;
     public int penalties = 0;
     public int? memeberID = null;
-    List<Book>? books = null;
+    public List<Book>? books = null;
     public Member(string firstName, string lastName, int memberID)
     {
         this.firstName = firstName;
