@@ -2,7 +2,7 @@
 {
     public string name;
     public List<Book> books;
-    public List<Book> borrowedBooks;
+    // public List<Book> borrowedBooks;
     public List<Librarian> librarians;
     public List<Member> members;
     public List<BookWriter> writers;
@@ -14,7 +14,10 @@
 
     public void AddBook(Book book)
     {
-        books.Add(book);
+        if (books == null)
+            books = new List<Book> { book };
+        else
+            books.Add(book);
     }
 
     public void DeleteBook(Book book)
@@ -26,15 +29,20 @@
     {
         borrowedBook.borrowed = member;
         borrowedBook.borrowedDate = borrowedDate;
-        if (borrowedBooks == null)
+        if (books == null)
         {
-            borrowedBooks = new List<Book>
+            books = new List<Book>
             {
                 borrowedBook,
             };
         }
         else
-            borrowedBooks.Add(borrowedBook);
+        {
+            books.Find(b => b.name == borrowedBook.name).borrowed = member;
+            books.Find(b => b.name == borrowedBook.name).borrowedDate = borrowedDate;
+        }
+            
+            
     }
 
     public void DeleteBorrowedBook(Book borrowedBook, LibraryDate returnDate)
@@ -43,12 +51,13 @@
         if (daysBorrowed > 7)
         {
             borrowedBook.borrowed.penalties += daysBorrowed * 500;
-            Console.WriteLine($"Your return penalty is {borrowedBook.borrowed.penalties}");
+            Console.WriteLine($"Your return penalty is {borrowedBook.borrowed.penalties} Tomans!");
         }
             
         borrowedBook.borrowed = null;
         borrowedBook.borrowedDate = null;
-        borrowedBooks.Remove(borrowedBook);
+        books.Find(b => b.name == borrowedBook.name).borrowed = null;
+        books.Find(b => b.name == borrowedBook.name).borrowedDate = null;
     }
 
     public void GetBooks()
@@ -61,6 +70,7 @@
 
     public void GetBorrowedBooks()
     {
+        var borrowedBooks = books.FindAll(x => x.borrowed != null);
         if (borrowedBooks == null)
             Console.WriteLine("No books borrowed yet!");
         else
@@ -82,7 +92,10 @@
 
     public void AddLibrarian(Librarian librarian)
     {
-        librarians.Add(librarian);
+        if (librarians == null)
+            librarians = new List<Librarian> { librarian };
+        else
+            librarians.Add(librarian);
     }
 
     public void GetLibrarians()
@@ -100,7 +113,10 @@
 
     public void AddMember(Member member)
     {
-        members.Add(member);
+        if (members == null)
+            members = new List<Member> { member};
+        else
+            members.Add(member);
     }
 
     public void GetMembers()

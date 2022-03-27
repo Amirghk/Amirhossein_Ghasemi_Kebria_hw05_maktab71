@@ -12,6 +12,12 @@
 
     };
 
-    public static List<Member> members = new List<Member>();
-    public static List<Librarian> librarians = new List<Librarian>();
+    public static List<Member> members = new List<Member>
+    {
+        new("amir", "ghk", 1),
+    };
+    public static List<Librarian> librarians = new List<Librarian> 
+    {
+        new("tom", "riddle", 1),
+    };
 }

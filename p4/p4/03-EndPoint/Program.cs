@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 
 
-ILibraryRepository DATA = new LibraryRepository();
+ILibraryRepository DATA = new LibraryRepoFile();
 Library library = new("Library");
 // add everything to library for caching
 library.members = DATA.GetMembers();
@@ -81,12 +81,17 @@ void AddMember()
     {
         Console.WriteLine("Enter ID: ");
         id = Convert.ToInt32(Console.ReadLine());
-        if (DATA.GetMembers().FirstOrDefault(m => m.memeberID == id) != null)
-        {
-            Console.WriteLine("ID already exists!");
-        }
-        else 
+        if (DATA.GetMembers() == null)
             loop = false;
+        else
+        {
+            if (DATA.GetMembers().FirstOrDefault(m => m.memeberID == id) != null)
+            {
+                Console.WriteLine("ID already exists!");
+            }
+            else
+                loop = false;
+        }      
     }
 
     Member member = new Member(first, last, id);
@@ -110,12 +115,17 @@ void AddLibrarian()
     {
         Console.WriteLine("Enter ID: ");
         id = Convert.ToInt32(Console.ReadLine());
-        if (DATA.GetLibrarians().FirstOrDefault(l => l.librarianID == id) != null)
-        {
-            Console.WriteLine("ID already exists!");
-        }
-        else
+        if (DATA.GetLibrarians() == null)
             loop = false;
+        else
+        {
+            if (DATA.GetLibrarians().FirstOrDefault(l => l.librarianID == id) != null)
+            {
+                Console.WriteLine("ID already exists!");
+            }
+            else
+                loop = false;
+        }
     }
 
     Librarian librarian = new Librarian(first, last, id);
@@ -135,7 +145,10 @@ void AddWriter()
     last = Console.ReadLine();
     
     BookWriter writer = new(first, last);
-    library.writers.Add(writer);
+    if (library.writers == null) 
+        library.writers = new List<BookWriter> { writer };
+    else
+        library.writers.Add(writer);
 
     Console.WriteLine("Press any key to continue");
     Console.ReadKey(true);
@@ -377,24 +390,31 @@ void ReturnBook()
     Console.WriteLine("What book would you like to return: ");
 
     string? choice = Console.ReadLine();
-    var book = library.books.FirstOrDefault(b => b.name == choice);
-    if (book == null)
+    try
     {
-        Console.WriteLine($"No book named {choice} exists!");
-        return;
+        Book? book = library.books.FirstOrDefault(b => b.name == choice);
+        if (book == null)
+        {
+            Console.WriteLine($"No book named {choice} exists!");
+            return;
+        }  
+        Console.WriteLine("Day: ");
+        int day = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Month: ");
+        int month = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Year: ");
+        int year = Convert.ToInt32(Console.ReadLine());
+
+        var user = book.borrowed; // find out who the user was that borrowed the book
+
+        library.DeleteBorrowedBook(book, new(day, month, year));
+        user.books.Remove(book); // remove the book from the user's books list
+        user.penalties = 0;
     }
-    Console.WriteLine("Day: ");
-    int day = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Month: ");
-    int month = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Year: ");
-    int year = Convert.ToInt32(Console.ReadLine());
-
-    var user = book.borrowed; // find out who the user was that borrowed the book
-
-    library.DeleteBorrowedBook(book, new(day, month, year));
-    user.books.Remove(book); // remove the book from the user's books list
-    user.penalties = 0;
+    catch (Exception)
+    {
+        Console.WriteLine($"No book named {choice} exists in the library!");
+    }
 
     Console.WriteLine("Press any key to continue");
     Console.ReadKey(true);

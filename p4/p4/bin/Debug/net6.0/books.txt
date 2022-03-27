@@ -1,0 +1,13 @@
+[
+  {
+    "style": "fantasy",
+    "name": "Harry Potter",
+    "writer": {
+      "firstName": "jk",
+      "lastName": "rowling"
+    },
+    "borrowed": null,
+    "borrowedDate": null,
+    "Role": 2
+  }
+]
