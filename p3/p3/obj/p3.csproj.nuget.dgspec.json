@@ -1,27 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Amir Programming stuff\\HW5\\HomeWork5-MAKTAB\\p3\\p3\\p3.csproj": {}
+    "G:\\MAKTAB\\HomeWork5\\p3\\p3\\p3.csproj": {}
   },
   "projects": {
-    "C:\\Amir Programming stuff\\HW5\\HomeWork5-MAKTAB\\p3\\p3\\p3.csproj": {
+    "G:\\MAKTAB\\HomeWork5\\p3\\p3\\p3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Amir Programming stuff\\HW5\\HomeWork5-MAKTAB\\p3\\p3\\p3.csproj",
+        "projectUniqueName": "G:\\MAKTAB\\HomeWork5\\p3\\p3\\p3.csproj",
         "projectName": "p3",
-        "projectPath": "C:\\Amir Programming stuff\\HW5\\HomeWork5-MAKTAB\\p3\\p3\\p3.csproj",
-        "packagesPath": "C:\\Users\\Alireza\\.nuget\\packages\\",
-        "outputPath": "C:\\Amir Programming stuff\\HW5\\HomeWork5-MAKTAB\\p3\\p3\\obj\\",
+        "projectPath": "G:\\MAKTAB\\HomeWork5\\p3\\p3\\p3.csproj",
+        "packagesPath": "C:\\Users\\Lion\\.nuget\\packages\\",
+        "outputPath": "G:\\MAKTAB\\HomeWork5\\p3\\p3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alireza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lion\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {

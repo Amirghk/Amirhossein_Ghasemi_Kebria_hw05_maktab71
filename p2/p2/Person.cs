@@ -17,7 +17,7 @@
         this.id = id;
     }
 
-    // how to override Equals method of object?? https://www.c-sharpcorner.com/article/operator-overloading-in-C-Sharp2/
+    // https://www.c-sharpcorner.com/article/operator-overloading-in-C-Sharp2/
     public override bool Equals(object o)
     {
         Person p = (Person)o;
@@ -26,10 +26,7 @@
         else
             return false;
     }
-    public override int GetHashCode()
-    {
-        return id;
-    }
+
     public static bool operator ==(Person a, Person b)
     {
         return a.Equals(b);

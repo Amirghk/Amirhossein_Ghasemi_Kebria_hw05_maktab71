@@ -87,7 +87,33 @@
     {
         var availableBooks = books.FindAll(x => x.borrowed == null);
         foreach (var book in availableBooks)
-            Console.WriteLine($"-- {book.name}");
+        {
+            switch (book.Role)
+            {
+                case Roles.storyBook:
+                    StoryBook sb = book as StoryBook;
+                    sb.GetInfo();
+                    break;
+                case Roles.scienceBook:
+                    ScienceBook sc = book as ScienceBook;
+                    sc.GetInfo();
+                    break;
+                case Roles.researches:
+                    Researches rs = book as Researches;
+                    rs.GetInfo();
+                    break;
+                case Roles.thesis:
+                    Thesis th = book as Thesis;
+                    th.GetInfo();
+                    break;
+                case Roles.article:
+                    Article art = book as Article;
+                    art.GetInfo();
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     public void AddLibrarian(Librarian librarian)

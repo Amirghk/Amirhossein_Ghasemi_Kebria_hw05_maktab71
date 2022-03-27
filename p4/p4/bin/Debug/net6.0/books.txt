@@ -1,6 +1,6 @@
 [
   {
-    "style": "fantasy",
+    "style": "Fantasy",
     "name": "Harry Potter",
     "writer": {
       "firstName": "jk",

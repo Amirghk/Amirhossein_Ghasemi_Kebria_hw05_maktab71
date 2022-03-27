@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 
 
-ILibraryRepository DATA = new LibraryRepoFile();
+ILibraryRepository DATA = new LibraryRepository();
 Library library = new("Library");
 // add everything to library for caching
 library.members = DATA.GetMembers();
@@ -197,7 +197,7 @@ void AddBook()
             Console.WriteLine("What Style is the book written in?");
             string style = Console.ReadLine();
             StoryBook sb = new(name , writer, style);
-            library.AddBook(sb);
+            library.AddBook((StoryBook)sb);
             break;
         case ConsoleKey.D2: // ScienceBook
             Console.WriteLine("Enter the name of the book:");
@@ -228,7 +228,7 @@ void AddBook()
             Console.WriteLine("What Scientific field does this book relate to?");
             string sField = Console.ReadLine();
             ScienceBook scb = new(name, writer, sField);
-            library.AddBook(scb);
+            library.AddBook((ScienceBook)scb);
             break;
         case ConsoleKey.D3: // Research
             Console.WriteLine("Enter the name of the book:");
@@ -259,7 +259,7 @@ void AddBook()
             Console.WriteLine("What university was this research done in?");
             string uni = Console.ReadLine();
             Researches res = new(name, writer, uni);
-            library.AddBook(res);
+            library.AddBook((Researches)res);
             break;
         case ConsoleKey.D4: // Article
             Console.WriteLine("Enter the name of the book:");
@@ -294,7 +294,7 @@ void AddBook()
             Console.WriteLine("Enter the year this article was published: ");
             int year = Convert.ToInt32(Console.ReadLine());
             Article art = new(name, writer, uni, journal, year);
-            library.AddBook(art);
+            library.AddBook((Article)art);
             break;
         case ConsoleKey.D5: // Thesis
             Console.WriteLine("Enter the name of the book:");
@@ -328,7 +328,7 @@ void AddBook()
             Console.WriteLine("Enter the name of the assisting professor: ");
             string proff = Console.ReadLine();
             Thesis th = new(name, writer, uni, proff);
-            library.AddBook(th);
+            library.AddBook((Thesis)th);
             break;
         default:
             Console.WriteLine("Wrong Input!");
